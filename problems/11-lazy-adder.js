@@ -6,24 +6,34 @@ When the last mentioned function is invoked with a number, (thirdNum), it will
 FINALLY return a number. See below for examples!
 
 Example 1:
-let firstAdd = lazyAdder(1);
-let secondAdd = firstAdd(2);
-let sum = secondAdd(3);
-console.log(sum); // prints 6
 
-Example 2:
-let func1 = lazyAdder(10);
-let func2 = func1(20);
-let total = func2(3);
-console.log(total); // prints 33
 
 AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Explain, but don't code, how you would turn your solution into a one-line
   fat-arrow function
 ***********************************************************************/
+// const lazyAdder = first =>{
+//   return (second) =>{
+//     return (third) =>{
+//       return first + second + third
+//     }
+//   }
+// }
 
-// Your code here 
+const lazyAdder = first => (second) => (third) => first + second + third
 
+
+
+let firstAdd = lazyAdder(1);
+let secondAdd = firstAdd(2);
+let sum = secondAdd(3);
+console.log(sum); // prints 6
+
+
+let func1 = lazyAdder(10);
+let func2 = func1(20);
+let total = func2(3);
+console.log(total); // prints 33
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
