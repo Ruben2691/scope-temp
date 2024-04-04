@@ -6,11 +6,20 @@ Write this function using an arrow function!
 
 Examples:
 
+
+***********************************************************************/
+const arrowMirrorArray = arr =>{
+  let first = []
+  let second = []
+  for(let ele of arr){
+    first.push(ele)
+    second.unshift(ele)
+  }
+  return [...first, ...second]
+}
+
 arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
-***********************************************************************/
-
-// Your code here 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
