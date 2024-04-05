@@ -6,17 +6,26 @@ common to both firstArr and secondArr.
 
 
 Example 1:
+
+
+*******************************************************************************/
+const plannedIntersect = arr1 =>{
+  return (arr2) =>{
+    let arr = []
+    for(let i = 0; i < arr1.length; i++){
+      let ele1 = arr1[i]
+      if(arr2.includes(ele1)) arr.push(ele1)
+    }
+  return arr
+  }
+}
+
 let abc = plannedIntersect(["a", "b", "c"]); // returns a function
 console.log(abc(["b", "d", "c"])); // returns [ 'b', 'c' ]
 
-Example 2:
+
 let fame = plannedIntersect(["f", "a", "m", "e"]); // returns a function
 console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
-
-*******************************************************************************/
-
-// Your code here 
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
 try {

@@ -12,13 +12,18 @@ invoked below:
 
 ***********************************************************************/
 const countDownTimer = (num) => {
-
-    return () =>{
-      let count = num
-      count -= 1
-      if(count ===  0) return "Happy New Year!"
+  // let count = num
+  if(num === 0) return "Happy New Year!"
+  const reducer = () =>{
+    num--
+    if(num > 0){
+      return reducer
+     }else{
+      return "Happy New Year!"
     }
 
+  }
+  return reducer
 }
 
 

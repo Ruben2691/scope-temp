@@ -6,6 +6,17 @@ create new separate custom multiply functions.
 
 Look below to see how this function is invoked:
 
+
+
+
+***********************************************************************/
+const dynamicMultiply = num => {
+  return (by) =>{
+    return num * by
+  }
+}
+
+
 const doubler = dynamicMultiply(2); // returns a function
 doubler(5); // returns 10
 
@@ -14,12 +25,6 @@ tripler(5); // returns 15
 
 const multiplyByFive = dynamicMultiply(5);
 multiplyByFive(5); // returns 25
-
-
-***********************************************************************/
-
-// Your code here 
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
